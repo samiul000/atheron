@@ -1,0 +1,242 @@
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+:root {
+    --clr-1: #052b2f;
+    --clr-2: #073438;
+    --clr-3: #170a47;
+    --clr-4: #00d9ff;
+    --clr-5: #0011ff;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../assests/surface.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* Atmosphere Modal Btn */
+.atmos-button {
+    margin-top: 100px;
+    padding: 10px 20px;
+    height: 20px;
+    left: 48%;
+    position: relative;  
+    background: transparent;
+    color: #ffffff; 
+    font-size: 16px; 
+    font-weight: bold; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    background-color: #103663;
+}
+
+.atmos-button::before,
+.atmos-button::after {
+    content: "";
+    position: absolute;
+    inset: -0.4rem;
+    z-index: -1;
+    background: conic-gradient(
+        from var(--gradient-angle),
+        var(--clr-3),
+        var(--clr-4),
+        var(--clr-5),
+        var(--clr-4),
+        var(--clr-3)
+    );
+    border-radius: inherit;
+    animation: rotation 3s linear infinite;
+}
+
+.atmos-button::after {
+    filter: blur(60px);
+}
+
+@keyframes rotation {
+    0% { --gradient-angle: 0deg; }
+    100% { --gradient-angle: 360deg; }
+}
+
+/* Surface Modal Button */
+.surface-button {
+    margin-bottom: 190px;
+    padding: 10px 25px;
+    height: 20px;
+    top: 75%;
+    left: 42%;
+    position: relative; 
+    background: transparent; 
+    color: #ffffff; 
+    font-size: 16px; 
+    font-weight: bold; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    background-color: #103663;
+}
+
+.surface-button::before,
+.surface-button::after {
+    content: "";
+    position: absolute;
+    inset: -0.4rem;
+    z-index: -1;
+    background: conic-gradient(
+        from var(--gradient-angle),
+        var(--clr-3),
+        var(--clr-4),
+        var(--clr-5),
+        var(--clr-4),
+        var(--clr-3)
+    );
+    border-radius: inherit;
+    animation: rotation 3s linear infinite;
+}
+
+.surface-button::after {
+    filter: blur(60px);
+}
+
+@keyframes rotation {
+    0% { --gradient-angle: 0deg; }
+    100% { --gradient-angle: 360deg; }
+}
+
+/* Ocean Modal Button */
+.ocean-button {
+    padding: 10px 30px;
+    height: 20px;
+    top: 90%;
+    left: 36.5%;
+    margin-bottom: 50px;
+    position: relative;  
+    background: transparent;
+    color: #ffffff; 
+    font-size: 16px; 
+    font-weight: bold; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    background-color: #103663;
+}
+
+.ocean-button::before,
+.ocean-button::after {
+    content: "";
+    position: absolute;
+    inset: -0.4rem;
+    z-index: -1;
+    background: conic-gradient(
+        from var(--gradient-angle),
+        var(--clr-3),
+        var(--clr-4),
+        var(--clr-5),
+        var(--clr-4),
+        var(--clr-3)
+    );
+    border-radius: inherit;
+    animation: rotation 3s linear infinite;
+}
+
+.ocean-button::after {
+    filter: blur(60px);
+}
+
+@keyframes rotation {
+    0% { --gradient-angle: 0deg; }
+    100% { --gradient-angle: 360deg; }
+}
+
+/* Modal Container */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(155, 154, 154, 0.4);
+}
+
+/* Modal Content */
+.modal-content {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    margin: 15% auto; 
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%; 
+    max-width: 500px; 
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Explore Button */
+.explore-btn {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    height: 20px;
+    width: 70px;  
+    background: transparent;
+    border: 2px solid #3498db; 
+    background-color: aqua; 
+    font-size: 16px; 
+    font-weight: bold; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.explore-btn:hover {
+    background-color: #3498db; 
+    color: white; 
+}
+
+/* Back Btn */
+
+/* Home Btn */
+.home-btn {
+    margin: 10px;
+    padding: 10px 20px;
+    top: 0;
+    left: 0;
+    position: absolute;  
+    background: transparent;
+    border: 2px solid #3498db; 
+    color: #3498db; 
+    font-size: 16px; 
+    font-weight: bold; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.home-btn:hover {
+    background-color: #3498db; 
+    color: white; 
+}

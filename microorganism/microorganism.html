@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="microorganism.css">
+</head>
+<body>
+    <div class="microorganism">
+        <div class="outer-cell">
+            <div class="inner-cell">
+                <div class="nucleus">
+                    <div class="nucleus-txt">Nucleus</div>
+                </div>
+            </div>
+        </div>
+        <div class="materials">
+            <div class="sulfide">
+                <div class="txt">H<sub>2</sub>S</div>
+            </div>
+            <div class="carbon-dioxide">  
+                <div class="txt">CO<sub>2</sub></div>
+            </div>
+            <div class="water">
+                <div class="txt">H<sub>2</sub>O</div>
+            </div>
+        </div>
+        <div class="by-products">
+            <div class="glucose">
+                <div class="txt">Glucose</div>
+            </div>
+            <div class="energy">  
+                <div class="txt">Heat</div>
+            </div>
+            <div class="acid">  
+                <div class="txt">H<sub>2</sub>SO<sub>4</sub></div>
+            </div>
+        </div>
+        <div class="explosion"></div>
+    </div>
+    
+    <div id="openModalBtn" class="abt-button">About</div>
+
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>How Chemosynthesis Produce Food & Energy?</h2>
+           <P>The bacteria or micro-organism absorbs CO<sub>2</sub>, H<sub>2</sub>S & H<sub>2</sub>O. Later it oxidize H<sub>2</sub>S into SO<sub>2</sub> gas,
+              generating energy in the form of adenosine triphosphate (ATP), the primary energy carrier in cells. The reaction can be summarized as:
+            </P>
+            <p><b>2H<sub>2</sub>​S + O<sub>2</sub> ​→ 2SO<sub>2</sub> ​+ 2H<sub>2</sub>​O + ATP</b></p>
+            <p>The ATP produced during this oxidation is then utilized in the Calvin cycle or a similar carbon fixation pathway to convert carbon dioxide (CO₂) into organic molecules like glucose (C₆H₁₂O₆). 
+               The overall process of carbon fixation during chemosynthesis can be represented as:
+            </p>
+            <p><b>6CO<sub>2</sub> + 12H<sub>2</sub>O + ATP ​→ C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 6O<sub>2</sub> + Energy </b></p>
+            <p>In some cases, depending on the bacteria, sulfuric acid (H₂SO₄) may be produced as a byproduct when the oxidized sulfur dioxide (SO₂) further reacts with water:</p>
+            <p><b>SO<sub>2</sub> + H<sub>2</sub>O ​→ H<sub>2</sub>SO<sub>4</sub></b></p>
+            <p>Thus, this process allows the bacteria to thrive in environments where sunlight is unavailable, such as deep-sea hydrothermal vents, 
+                by relying on inorganic chemical reactions to produce energy and synthesize organic compounds.
+            </p>
+        </div>
+    </div>
+
+    <div class="home-button" onclick="init()">Home</div>
+
+    <div class="back-button" onclick="back()">Back</div>
+    
+    <script src="microorganism.js"></script>        
+</body>
+</html>

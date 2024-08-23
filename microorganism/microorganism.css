@@ -1,0 +1,315 @@
+body{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgb(2, 2, 56), rgb(0, 0, 238));
+    overflow: hidden;
+}
+
+.microorganism {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.outer-cell {
+    position: relative;
+    width: 600px;
+    height: 800px;
+    background-color: #00796b;
+    border-radius: 50% / 30%;
+    padding: 10px;
+}
+
+.inner-cell {
+    width: 100%;
+    height: 100%;
+    background-color: #004d40;
+    border-radius: 50% / 30%;
+    position: relative;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.nucleus {
+    width: 400px;
+    height: 200px;
+    background-color: #80deea;
+    border-radius: 50% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .nucleus-txt {
+        font-size: large;
+        font-weight: 600;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+}
+
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.outer-cell {
+    animation: float 5s ease-in-out infinite;
+}
+
+/* Materials */
+
+.materials {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    display: flex;
+    gap: 8px;
+    transform: translateX(-50%);
+}
+
+.sulfide, .carbon-dioxide, .water {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.sulfide {
+    background-color: #FFD700;
+
+    .txt {
+        
+        margin-top: 12px;
+        font-size: 10px;
+        text-align: center;
+    }
+}
+
+.carbon-dioxide {
+    background-color: #ff7b00;
+
+    .txt {
+        
+        margin-top: 12px;
+        font-size: 10px;
+        text-align: center;
+    }
+}
+
+.water {
+    background-color: #0097dd;
+    
+    .txt {
+        
+        margin-top: 12px;
+        font-size: 10px;
+        text-align: center;
+    }
+}
+
+.animate-materials .sulfide, 
+.animate-materials .carbon-dioxide, 
+.animate-materials .water {
+    animation: materials-flow 4s infinite linear;
+}
+
+@keyframes materials-flow {
+    0% { transform: translateY(0); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-350px); opacity: 0; }
+}
+
+/* Explosion */
+@keyframes explosion {
+    0% { transform: scale(0); opacity: 1; }
+    100% { transform: scale(2); opacity: 0; }
+}
+
+.explosion {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: #ff5252;
+    border-radius: 50%;
+    transform: scale(0);
+    opacity: 0;
+    animation: explosion 0.5s ease-in-out forwards;
+    display: none; /* Start hidden */
+}
+
+/* By Products */
+.by-products {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    display: flex;
+    gap: 8px;
+    transform: translateX(-50%);
+}
+
+.glucose, .energy, .acid {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+
+
+.glucose {
+    background-color: #ffffff;
+
+    .txt {
+        
+        margin-top: 12px;
+        font-size: 10px;
+        text-align: center;
+    }
+}
+
+.acid {
+    background-color: #ffe600;
+
+    .txt {
+        
+        margin-top: 12px;
+        font-size: 10px;
+        text-align: center;
+    }
+}
+
+.energy {
+    background-color: #b30e02;
+
+    .txt {
+        
+        margin-top: 12px;
+        font-size: 10px;
+        text-align: center;
+    }
+}
+
+.animate-products .glucose,
+.animate-products .acid, 
+.animate-products .energy {
+    animation: materials-flow 4s infinite linear;
+}
+
+
+@keyframes products-flow {
+    0% { transform: translateY(0); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-350px); opacity: 0; }
+}
+
+/* About button */
+.abt-button {
+    margin: 10px;
+    padding: 10px 20px;
+    top: 0;
+    left: 0;
+    position: absolute;  
+    background: transparent;
+    border: 2px solid #3498db; 
+    color: #3498db; 
+    font-size: 16px; 
+    font-weight: bold; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.abt-button:hover {
+    background-color: #3498db; 
+    color: white; 
+}
+
+/* Modal Container */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow-y: scroll;
+    background-color: rgba(155, 154, 154, 0.4); 
+}
+
+/* Modal Content */
+.modal-content {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    margin: 10% auto; 
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%; 
+    max-width: 500px; 
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Home button */
+.home-button {
+    margin: 10px;
+    padding: 10px 20px;
+    top: 0;
+    right: 0;
+    position: absolute;  
+    background: transparent;
+    border: 2px solid #3498db; 
+    color: #3498db; 
+    font-size: 16px; 
+    font-weight: bold; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.home-button:hover {
+    background-color: #3498db; 
+    color: white;
+}
+
+/* Back Button */
+.back-button {
+    margin: 10px;
+    padding: 10px 20px;
+    top: 0;
+    left: 50%;
+    position: absolute;  
+    background: transparent;
+    border: 2px solid #3498db; 
+    color: #3498db; 
+    font-size: 16px; 
+    font-weight: bold; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.back-button:hover {
+    background-color: #3498db; 
+    color: white;
+}

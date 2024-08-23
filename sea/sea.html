@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sea.css">
+</head>
+<body>
+
+    <div class="back-btn" onclick="back()">Back</div>
+
+    <div class="deep-sea">
+
+        <div class="vent">
+            <div class="smoke"></div>
+        </div>
+        <div class="vent-2">
+            <div class="smoke"></div>
+        </div>
+        <div class="vent-3">
+            <div class="smoke"></div>
+        </div>
+       
+        <div class="sea">
+            <div class="chemicals">
+                <div class="sulfide">
+                    <div class="txt">H<sub>2</sub>S</div>
+                </div>
+                <div class="sulfide-2">  
+                        <div class="txt">H<sub>2</sub>S</div>
+                </div>
+                <div class="sulfide-3">
+                        <div class="txt">H<sub>2</sub>S</div>
+                </div>
+            </div>
+            
+            <div class="chemicals-2">
+                <div class="sulfide">
+                    <div class="txt">H<sub>2</sub>S</div>
+                </div>
+                <div class="sulfide-2">  
+                        <div class="txt">H<sub>2</sub>S</div>
+                </div>
+                <div class="sulfide-3">
+                        <div class="txt">H<sub>2</sub>S</div>
+                </div>
+            </div>
+            
+            <div class="chemicals-3">
+                <div class="sulfide">
+                    <div class="txt">H<sub>2</sub>S</div>
+                </div>
+                <div class="sulfide-2">  
+                        <div class="txt">H<sub>2</sub>S</div>
+                </div>
+                <div class="sulfide-3">
+                        <div class="txt">H<sub>2</sub>S</div>
+                </div>
+            </div> 
+
+            <div id="openBacteriaModalBtn" class="microorganism">
+                <div class="outer-cell">
+                    <div class="inner-cell">
+                        <div class="nucleus"></div>
+                        <div class="ribosome"></div>
+                        <div class="cytoplasm-structure"></div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <div id="bacteriaModal" class="modal">
+        <div class="modal-content">
+            <span id="bacteriaCloseBtn" class="close">&times;</span>
+            <h2>Chemosynthetic Bacteria (Primary Producers)</h2>
+            <p><b>Chemosynthetic bacteria and archaea, analogous to those found on Earth, 
+                thrive in the extreme environments surrounding hydrothermal vents and other geothermally active regions. 
+                These microorganisms utilize hydrogen sulfide and methane as energy sources, oxidizing these compounds to produce organic molecules through chemosynthesis.</b>
+            </p>
+            <p>In these geothermal ecosystems, chemosynthetic bacteria and archaea form dense mats that serve as the primary producers in the food web. 
+                These microbial communities play a crucial role in the ecosystem by converting inorganic chemicals into organic matter, 
+                which provides a vital source of nutrition for a diverse range of other organisms.
+            </p>
+            <p><b>Look Inside to uncover its food production secrets😉</b></p>
+
+            <div class="inside-btn" onclick="init()">Look Inside🔎</div>
+        </div>
+    </div>
+
+    <div id="openSquidModalBtn" class="squid">
+        <img src="../assests/squid.png">
+    </div>
+    <div id="squidModal" class="modal">
+        <div class="modal-content">
+            <span id="squidCloseBtn" class="close">&times;</span>
+            <h2>Deep Stalkers (Predators)</h2>
+            <p><b>Deep Stalkers are formidable, squid-like predators that inhabit the hydrothermal vent ecosystems. 
+                These large creatures are characterized by their elongated, flexible bodies and an array of long, sinuous tentacles that extend from their central mantle. 
+                Each tentacle is equipped with specialized suckers and sometimes hooks, which aid in capturing and holding onto prey.</b>
+            </p>
+            <p>Deep Stalkers possess a sharp, beak-like mouthpart that is adapted for efficiently tearing apart and consuming smaller animals, 
+                including filter feeders, grazers, and other small invertebrates that thrive around hydrothermal vents. 
+                Their beaks are reinforced with strong, chitinous materials, allowing them to exert considerable force when feeding.
+            </p>
+            <p>The anatomy of Deep Stalkers is designed for stealth and agility. 
+                They can maneuver with precision and speed, making them effective hunters in the dimly lit and turbulent environment of the deep ocean. 
+                The creatures’ large, well-developed eyes are adapted to low-light conditions, providing them with excellent vision to detect prey against 
+                the backdrop of the dark ocean floor.
+            </p>
+            <p>Deep Stalkers play a crucial role in maintaining the balance of the vent ecosystem by controlling the population of smaller organisms. 
+                Their predatory behavior ensures the health and stability of the community by preventing any one species from becoming overly dominant.
+            </p>
+        </div>
+    </div>
+
+    <div id="openJellyModalBtn" class="jelly">
+        <img src="../assests/jelly-fish.png">
+    </div>
+    <div id="jellyModal" class="modal">
+        <div class="modal-content">
+            <span id="jellyCloseBtn" class="close">&times;</span>
+            <h2>Glow Worms(Predators)</h2>
+            <p><b>Glow Worms are fascinating, bioluminescent predators adapted to the extreme conditions of hydrothermal vent ecosystems. 
+                These organisms resemble jellyfish in appearance but are distinguished by their bioluminescence. 
+                They use their glowing, jellyfish-like forms to attract and lure prey within striking distance. 
+                The bioluminescence creates a captivating light display that draws smaller animals toward them, facilitating easier capture and consumption.</b>
+            </p>
+            <p>Glow Worms have developed a unique symbiotic relationship with chemosynthetic bacteria, which they house within specialized chambers in their bodies. 
+                This partnership benefits both organisms: the bacteria produce essential nutrients through chemical reactions with vent fluids, 
+                while the Glow Worms provide a protected environment for the bacteria to thrive. 
+                The nutrients generated by the bacteria support the Glow Worms' energy needs and overall health.
+            </p>
+            <p>
+                These predators are equipped with specialized appendages or tentacles designed for swift and effective prey capture. 
+                The bioluminescence not only aids in hunting but may also play a role in communication and attracting mates.
+            </p>
+        </div>
+    </div>
+
+    <div id="openTomopterisModalBtn" class="tomopteris">
+        <img src="../assests/Tomopteris.png">
+    </div>
+    <div id="tomopterisModal" class="modal">
+        <div class="modal-content">
+            <span id="tomopterisCloseBtn" class="close">&times;</span>
+            <h2>Sea Floor Crawlers(Scavengers)</h2>
+            <p><b>Sea Floor Crawlers are slow-moving scavenger organisms that inhabit the depths of hydrothermal vent ecosystems. 
+                These creatures are adapted to a life of foraging on the ocean floor, where they primarily feed on bacteria and biological waste produced by other marine organisms.</b>
+            </p>
+            <p>Equipped with specialized scraping structures or appendages, Sea Floor Crawlers effectively graze the sea floor, removing accumulated bacterial mats and organic detritus. 
+                Their feeding mechanisms are adapted to efficiently process the nutrient-poor materials found in their environment.
+            </p>
+            <p>By consuming bacteria and bio-waste, Sea Floor Crawlers play a crucial role in nutrient cycling and ecosystem maintenance. 
+                They help to regulate microbial populations and facilitate the breakdown of organic matter, 
+                thus contributing to the overall health and balance of the hydrothermal vent community.
+            </p>
+        </div>
+    </div>
+    
+    <div id="openSpongeModalBtn" class="sponge">Sponge</div>
+    <div id="spongeModal" class="modal">
+        <div class="modal-content">
+            <span id="spongeCloseBtn" class="close">&times;</span>
+            <h2>Vent Sponge (Filter Feeders)</h2>
+            <p><b>Vent sponges are stationary organisms that play a crucial role in the ecosystem surrounding hydrothermal vents. 
+                These sponges are uniquely adapted to their extreme environment, where they use highly specialized structures to filter bacteria from the water.</b>
+            </p>
+            <p>The body of a vent sponge is typically perforated with numerous tiny pores, known as ostia, which allow water to flow through its porous structure. 
+                As water passes through the sponge, specialized cells called choanocytes line the internal cavities. 
+                These cells possess flagella that create a water current, enabling the sponge to capture and ingest microscopic particles, including chemosynthetic bacteria.
+            </p>
+            <p>Vent sponges often have a robust and highly porous skeleton made of siliceous or calcareous spicules, which provides structural support and enhances their filtering efficiency. 
+                The sponge's ability to filter large volumes of water allows it to extract the nutrients and bacteria necessary for its survival. 
+                In turn, vent sponges contribute to the overall health of the ecosystem by helping to regulate the microbial population and facilitating nutrient cycling within the hydrothermal vent community.
+            </p>
+        </div>
+    </div>
+
+    <div id="openModalBtn" class="abt-button"></div>
+    
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Chemosynthesis</h2>
+            <P>Chemosynthesis is a process used by some organisms to produce sugar and energy without relying on sunlight, unlike photosynthesis. 
+                It primarily occurs in environments where sunlight is not available,
+                such as deep-sea hydrothermal vents or underground caves.
+            </P>
+            <P>Instead of sunlight, chemosynthetic organisms use chemical energy from inorganic molecules.
+                Common energy sources include hydrogen sulfide (H₂S), methane (CH₄), and ammonia (NH₃). 
+                As a by-products they produce Glucose or Sugar , Energy & Sulfuric Acid
+            </P>
+            <P><b>Tap on the floating bacteria & know its chemical secrets😉</b></P>
+        </div>
+    </div>
+
+    <div class="home-button" onclick="home()">Home</div>
+
+    <script src="sea.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="surface.css">
+</head>
+<body>
+    
+    <div class="home-btn" onclick="home()">Home</div>
+
+    <div id="openAtmosModalBtn" class="atmos-button">Atmosphere</div>
+    <div id="atmosModal" class="modal">
+        <div class="modal-content">
+            <span id="atmosCloseBtn" class="close">&times;</span>
+            <h2>Atmosphere</h2>
+            <p>The planet is enveloped by a remarkably dense atmosphere with a thickness of approximately 135 kilometers. 
+                This atmosphere is primarily composed of 57% ammonia and 33.55% methane, with trace amounts of nitrogen (5%), water vapor (3%), carbon dioxide (1%), and argon (0.45%).
+                The high concentration of ammonia and methane, combined with the thick atmospheric layer, 
+                results in an impenetrable barrier to sunlight, causing the planet's surface to remain in perpetual darkness.
+            </p>
+            <p>The atmospheric density generates extremely high pressure at the surface,
+                while the lack of solar radiation contributes to an extremely cold surface temperature, averaging around -120°C. 
+                Despite the insulating properties of the thick atmosphere, which would ordinarily moderate temperatures, 
+                the absence of sunlight means that heat is not replenished, thus maintaining the planet's frigid conditions.
+            </p>
+        </div>
+    </div>
+
+
+
+
+
+    <div id="openSurfaceModalBtn" class="surface-button">Surface</div>
+    <div id="surfaceModal" class="modal">
+        <div class="modal-content">
+            <span id="surfaceCloseBtn" class="close">&times;</span>
+            <h2>Surface(Ice Crust Layer)</h2>
+            <p>The ice crust layer is about <b>500-kilometers-thick</b>, primarily composed of frozen water, 
+                along with other cryogenic substances such as frozen methane and ammonia. 
+                This ice layer acts as a barrier, separating the harsh surface conditions from the more hospitable environment below. 
+                The crust allows for limited thermal interaction between the planet's interior and its subsurface ocean, 
+                contributing to the planet's geological and hydrological activity.
+            </p>
+        </div>
+    </div>
+
+
+
+
+
+    <div id="openOceanModalBtn" class="ocean-button">Ocean</div>
+    <div id="oceanModal" class="modal">
+        <div class="modal-content">
+            <span id="oceanCloseBtn" class="close">&times;</span>
+            <h2>Structure of Planet-X</h2>
+            <p>The ocean, maintaining a stable temperature of approximately <b>10°C</b>, is sustained by the planet's internal thermal activity, 
+                likely driven by geothermal processes, tidal forces, or chemical reactions within the core. 
+                This stable thermal environment supports a unique chemosynthesis-based ecosystem, where organisms derive energy from chemical reactions rather than solar radiation.
+            </p>
+            <p>Hydrothermal vents located on the ocean floor supply essential nutrients, such as sulfide gases, necessary for the survival of chemosynthetic bacteria. 
+                These bacteria, in turn, form the foundation of the ecosystem by converting chemical energy into organic compounds.
+            </p>
+            <p>The ecosystem comprises various specialized organisms adapted to this environment. 
+                Filter feeders and grazers, such as vent sponges, rely on the chemosynthetic bacteria as a primary food source. Predatory species, including squid, 
+                bioluminescent jellyfish-like glow worms, and sea-floor crawlers, inhabit areas around the vents, preying on the filter feeders and grazers.
+            </p>
+            <p><b>Click Explore to know more about this unique marine ecosystem😉</b></p>
+            
+            <div class="explore-btn" onclick="explore()">Explore!!!</div>
+        </div>
+    </div>
+
+    <script src="surface.js"></script>        
+</body>
+</html>

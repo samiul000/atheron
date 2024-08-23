@@ -1,0 +1,389 @@
+:root {
+    --clr-sulfide: #ffd700;
+}
+
+body {
+    margin: 0;
+    background-image: url('../assests/ocean.png');
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.vent {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 180px;
+    background-color: #000000;
+    border-radius: 70% 60% 0 0;
+    overflow: hidden;
+}
+
+.vent-2 {
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 180px;
+    background-color: #000000;
+    border-radius: 70% 60% 0 0;
+    overflow: hidden;
+}
+
+.vent-3 {
+    position: absolute;
+    bottom: 0;
+    left: 80%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 180px;
+    background-color: #000000;
+    border-radius: 70% 60% 0 0;
+    overflow: hidden;
+}
+
+
+.smoke {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    width: 60px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(105,105,105,0.7) 20%, rgba(105,105,105,0) 70%);
+    animation: smoke 4s infinite linear;
+    transform: translateX(-50%);
+}
+
+@keyframes smoke {
+    0% { bottom: 0; opacity: 1; }
+    100% { bottom: 500px; opacity: 0; }
+}
+
+.sea {
+    background: transparent;
+}
+
+.chemicals {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    display: flex;
+    gap: 8px;
+    transform: translateX(-40%);
+}
+
+.chemicals-2 {
+    position: absolute;
+    bottom: 60px;
+    left: 20%;
+    display: flex;
+    gap: 8px;
+    transform: translateX(-40%);
+}
+
+.chemicals-3 {
+    position: absolute;
+    bottom: 60px;
+    left: 80%;
+    display: flex;
+    gap: 8px;
+    transform: translateX(-40%);
+}
+
+.sulfide, .sulfide-2, .sulfide-3 {
+    width: 20px;
+    height: 20px;
+    background-color: var(--clr-sulfide); 
+    border-radius: 50%;
+    animation: chemical-flow 3.8s infinite linear;
+}
+
+
+
+.sulfide {
+    background-color: var(--clr-sulfide);
+
+    .txt {
+        
+        margin-top: 3px;
+        font-size: 10px;
+        text-align: center;
+    }
+}
+
+.sulfide-2 {
+    background-color: var(--clr-sulfide);
+    animation-delay: 0.2s;
+
+    .txt {
+        
+        margin-top: 3px;
+        font-size: 10px;
+        text-align: center;
+    }
+}
+
+.sulfide-3 {
+    background-color: var(--clr-sulfide);
+    animation-delay: 0.3s;
+
+    .txt {
+        
+        margin-top: 3px;
+        font-size: 10px;
+        text-align: center;
+    }
+}
+
+@keyframes chemical-flow {
+    0% { transform: translateY(0); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-200px); opacity: 0; }
+}
+
+/* Microorganism */
+.microorganism {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.outer-cell {
+    position: relative;
+    width: 60px;
+    height: 150px;
+    background-color: #00796b;
+    border-radius: 50% / 30%;
+    padding: 10px;
+}
+
+.inner-cell {
+    width: 100%;
+    height: 100%;
+    background-color: #004d40;
+    border-radius: 50% / 30%;
+    position: relative;
+}
+
+.nucleus {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #80deea;
+    border-radius: 50%;
+    top: 20%;
+    left: 30%;
+}
+
+.ribosome {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #80deea;
+    border-radius: 50%;
+    top: 50%;
+    left: 60%;
+}
+
+.cytoplasm-structure {
+    position: absolute;
+    width: 40px;
+    height: 10px;
+    background-color: #80deea;
+    border-radius: 20px;
+    top: 70%;
+    left: 20%;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.outer-cell {
+    animation: float 5s ease-in-out infinite;
+}
+
+/* Squid */
+.squid img {
+    height: 250px;
+    width: 250px;
+    left: 10%;
+    top: 20%;
+    position: absolute;
+}
+
+@keyframes squid-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.squid img {
+    animation: squid-float 5s ease-in-out infinite;
+}
+
+/* Jelly */
+.jelly img {
+    height: 250px;
+    width: 250px;
+    right: 5%;
+    top: 10%;
+    position: absolute;
+    transform: rotate(35deg) scale(1.2);
+    animation: jelly-float 4s ease-in-out infinite;
+}
+
+@keyframes jelly-float {
+    0%, 100% { 
+        transform: rotate(35deg) scale(1.2) translateY(0); 
+    }
+    50% { 
+        transform: rotate(35deg) scale(1.2) translateY(-10px); 
+    }
+}
+
+/* Tomopteris */
+.tomopteris img {
+    height: 100px;
+    width: 100px;
+    right: 8%;
+    top: 70%;
+    position: absolute;
+    transform: rotate(0deg) scale(1.2);
+    animation: tomopteris-float 4s ease-in-out infinite;
+}
+
+@keyframes tomopteris-float {
+    0%, 100% { 
+        transform: rotate(0deg) scale(1.2) translateY(0); 
+    }
+    50% { 
+        transform: rotate(0deg) scale(1.2) translateY(-10px); 
+    }
+}
+
+/* Sponge */
+.sponge {
+    position: absolute;
+    right: 29%;
+    top: 75%;
+    padding: 30px 20px;
+    background-color: white;
+    cursor: pointer;
+    opacity: 0;
+}
+
+
+/* About button */
+.back-btn {
+    margin: 10px;
+    padding: 10px 20px;
+    top: 0;
+    left: 0;
+    position: absolute;  
+    background: transparent;
+    border: 2px solid #3498db; 
+    color: #3498db; 
+    font-size: 16px; 
+    font-weight: bold; 
+    border-radius: 5px;
+    cursor: pointer; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.back-btn:hover {
+    background-color: #3498db; 
+    color: white; 
+}
+
+/* Modal Container */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(155, 154, 154, 0.4); 
+}
+
+/* Modal Content */
+.modal-content {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    margin: 15% auto; 
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%; 
+    max-width: 500px; 
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Home button */
+.home-button {
+    margin: 10px;
+    padding: 10px 20px;
+    top: 0;
+    right: 0;
+    position: absolute;  
+    background: transparent;
+    border: 2px solid #3498db; 
+    color: #3498db; 
+    font-size: 16px; 
+    font-weight: bold; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.home-button:hover {
+    background-color: #3498db; 
+    color: white; 
+}
+
+/* Inside Button */
+.inside-btn {
+
+    padding: 10px 20px;
+    width: 114px; 
+    background: transparent;
+    border: 2px solid #3498db; 
+    background-color: aqua; 
+    font-size: 16px; 
+    font-weight: bold; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.inside-btn:hover {
+    background-color: #3498db; 
+    color: white; 
+}
+
